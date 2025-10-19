@@ -8,7 +8,7 @@
 
 <meta name="author" content="Josué Jhonatan Colunche Vasquez">
 
-<title>DISEÑOS EXPERIMENTALES EN AGRONOMÍA</title>
+<title>DISEÑOS EXPERIMENTALES</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,37 +67,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-db9071724a0ec8d7f037c025321719cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-f144c7356608c13efe459219ebc85200.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
 <body class="quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contenido</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto"><span class="header-section-number">1</span> Quarto</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">2</span> Running Code</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto"><span class="header-section-number">0.1</span> Quarto</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">0.2</span> Running Code</a></li>
+  <li><a href="#diseños-experimentales" id="toc-diseños-experimentales" class="nav-link" data-scroll-target="#diseños-experimentales"><span class="header-section-number">1</span> Diseños Experimentales</a>
+  <ul class="collapse">
+  <li><a href="#dca" id="toc-dca" class="nav-link" data-scroll-target="#dca"><span class="header-section-number">1.1</span> DCA</a></li>
+  <li><a href="#dbca_factorial" id="toc-dbca_factorial" class="nav-link" data-scroll-target="#dbca_factorial"><span class="header-section-number">1.2</span> DBCA_FACTORIAL</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DISEÑOS EXPERIMENTALES EN AGRONOMÍA</h1>
+<h1 class="title">DISEÑOS EXPERIMENTALES</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
@@ -121,12 +126,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1</span> Quarto</h2>
+<section id="quarto" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="quarto"><span class="header-section-number">0.1</span> Quarto</h2>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
 </section>
-<section id="running-code" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="running-code"><span class="header-section-number">2</span> Running Code</h2>
+<section id="running-code" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="running-code"><span class="header-section-number">0.2</span> Running Code</h2>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
 <details class="code-fold">
@@ -144,6 +149,139 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</section>
+<section id="diseños-experimentales" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Diseños Experimentales</h1>
+<p>Los diseños experimentales permiten estructurar ensayos agrícolas de manera eficiente, optimizando la validez de los resultados.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(agricolae)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<section id="dca" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="dca"><span class="header-section-number">1.1</span> DCA</h2>
+<p>Factor → dosis de fertilización nitrogenada (kg/ha) 0 ~ testigo 50 100 Diseño: DCA Repeticiones: 5 UE → 3 dosis x 5 rep = 15</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definición de los tratamientos (factor: dosis de fertilización nitrogenada)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tratamientos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"50"</span>, <span class="st">"100"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Diseño completamente al azar (DCA) con 5 repeticiones</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>diseño <span class="ot">&lt;-</span> <span class="fu">design.crd</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">trt =</span> tratamientos,   <span class="co"># tratamientos</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">r =</span> <span class="dv">5</span>,                <span class="co"># número de repeticiones</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">123</span>,           <span class="co"># semilla para reproducibilidad</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">serie =</span> <span class="dv">2</span>             <span class="co"># numeración de las unidades experimentales</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización del diseño generado</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(diseño)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$parameters
+$parameters$design
+[1] "crd"
+
+$parameters$trt
+[1] "0"   "50"  "100"
+
+$parameters$r
+[1] 5 5 5
+
+$parameters$serie
+[1] 2
+
+$parameters$seed
+[1] 123
+
+$parameters$kinds
+[1] "Super-Duper"
+
+$parameters[[7]]
+[1] TRUE
+
+
+$book
+   plots r tratamientos
+1    101 1           50
+2    102 1          100
+3    103 2          100
+4    104 1            0
+5    105 2            0
+6    106 3          100
+7    107 3            0
+8    108 4            0
+9    109 2           50
+10   110 3           50
+11   111 4           50
+12   112 4          100
+13   113 5           50
+14   114 5          100
+15   115 5            0</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exportación de la tabla del diseño</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>diseño<span class="sc">$</span>book</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   plots r tratamientos
+1    101 1           50
+2    102 1          100
+3    103 2          100
+4    104 1            0
+5    105 2            0
+6    106 3          100
+7    107 3            0
+8    108 4            0
+9    109 2           50
+10   110 3           50
+11   111 4           50
+12   112 4          100
+13   113 5           50
+14   114 5          100
+15   115 5            0</code></pre>
+</div>
+</div>
+</section>
+<section id="dbca_factorial" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="dbca_factorial"><span class="header-section-number">1.2</span> DBCA_FACTORIAL</h2>
+<p>Factor 1 → dosis de fertilización nitrogenada (Kg/ha) Factor 2 → cultivares papa peruanita canchan Diseño: DBCA Repeticiones: 4 UE → 3 dosis x 2 cultivos x 4 rep = 24</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>trt<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>) <span class="co"># factorial 3x2</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>outdesign <span class="ot">&lt;-</span><span class="fu">design.ab</span>(trt, <span class="at">r=</span><span class="dv">3</span>, <span class="at">serie=</span><span class="dv">2</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>book<span class="ot">&lt;-</span>outdesign<span class="sc">$</span>book</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>book</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   plots block A B
+1    101     1 2 1
+2    102     1 3 2
+3    103     1 1 2
+4    104     1 1 1
+5    105     1 3 1
+6    106     1 2 2
+7    107     2 3 1
+8    108     2 2 2
+9    109     2 1 2
+10   110     2 1 1
+11   111     2 3 2
+12   112     2 2 1
+13   113     3 3 2
+14   114     3 2 1
+15   115     3 3 1
+16   116     3 1 1
+17   117     3 2 2
+18   118     3 1 2</code></pre>
+</div>
+</div>
+</section>
 </section>
 
 </main>
